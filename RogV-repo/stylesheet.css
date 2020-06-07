@@ -1,4 +1,30 @@
-/*** det der skal være ens for alt inde i body tagget bliver defineret her***/
+/*
+
+Indholdsfortegnelse:
+
+
+1.          Body (generelle indstillinger på siden - font, baggrundsbillede, margin)
+2.          A2 class (design og placering på knap til webshop)
+3.          Span (de sidste indstillinger til knap)
+4.          Keyframes (Bruges til animationen på knappen)
+5.          Logo class (Bruges i et div tag til at placere logoet)
+6.          Paragraph (Standard indstillingerne for p tag ændres her)
+7.          P1,2,3,4 classes (Indstillinger til de p tags der skal afvige fra standarden)
+8.          Boks1,2,3 classes (Indstillingerne til rammerne i bunden af siden - placering og størrelse)
+9.          Iframe (Indstillingerne til at få google maps til at fylde hele dens ramme)
+10.         Section (Giver sections 2 grids inde i dem, så vi kan få ting ved siden af hinanden)
+11.         Media - min. bredde 600px (Det første af 2 media tags - dvs. starten på tablet indstillinger)
+12.         Tablet - boks1,2,3 classes (Placering af bokse ændres på tablet)
+13.         Tablet - a2 class (placering af knappen til webshop ændres på tablet)
+14.         Media - min. bredde 900px (Det andet af 2 media tags - dvs. starten på desktop indstillinger)
+15.         Desktop - boks1,2,3 classes (Placering af bokse ændres på desktop)
+16.         Desktop - a2 class (Placering af knap ændres på desktop)
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+*/
+/*** 1. det der skal være ens for alt inde i body tagget bliver defineret her***/
 body{
   font-family: 'Montserrat', sans-serif;
 	background-image: url('images/landingpage_baggrund.png');
@@ -10,7 +36,7 @@ body{
   text-decoration: none;
 }
 
-/*** Her bliver designet af knappen defineret ***/
+/*** 2. Her bliver designet af knappen defineret ***/
 .a2{
   position: absolute;
   display: inline-block;
@@ -27,7 +53,7 @@ body{
   left: 70%;
 }
 
-/*** span bliver lavet her, fordi den er nem at have med at gøre i javascript. Det er i javascript vi bestemmer, hvor "span" skal bruges henne (på knappen) ***/
+/*** 3. span bliver lavet her, fordi den er nem at have med at gøre i javascript. Det er i javascript vi bestemmer, hvor "span" skal bruges henne (på knappen) ***/
 span{
   position: absolute;
   background:#fff;
@@ -37,7 +63,7 @@ span{
   animation: animate 1s linear infinite;
 }
 
-/*** Vi bruger @Keyframes, fordi vi vil lave en animation der sker når du trykker på knappen. Det er så vi kan bestemme, hvad der sker på de forskellige keyframes***/
+/*** 4. Vi bruger @Keyframes, fordi vi vil lave en animation der sker når du trykker på knappen. Det er så vi kan bestemme, hvad der sker på de forskellige keyframes***/
 @keyframes animate{
 0%
 {
@@ -53,31 +79,20 @@ span{
 } 
 }
 
-/*** Vi bruger et enkelt grid på siden, definere vi det i alle de ting der skal placeres.***/
-header{
-  grid-column: 1 / 1;
-  margin-top: 0px;
-}
-    
-nav{
-  grid-column: 1 / 1;
-  font-size: 10px;
-}
-
-/*** Dette id bruges til at placere logoet i toppen af siden***/
+/*** 5. Dette id bruges til at placere logoet i toppen af siden***/
 #navimg{
   text-align: center;
   padding-top:2%;
   padding-bottom: 5px;
   display: block;
 }
-
+/*** 6. ***/
 p{
   color: #7a322a;
   font-weight: 100 !important;
 }
 
-/*** de forskellige classes (p1,p2,p3) til at placere åbningstiderne ved siden af hinanden og (p4) definere overskrifterne i boksene***/
+/*** 7. de forskellige classes (p1,p2,p3) til at placere åbningstiderne ved siden af hinanden og (p4) definere overskrifterne i boksene***/
 .p1{
   grid-column: 1/2;
   margin-top: -5%;
@@ -96,7 +111,7 @@ p{
   font-size:1.4em;
 }
 
-/*** Her bliver de forskellige bokse i bunden af siden defineret, hvor vi så senere i css'en ændre de få ting der skal ændres så de passer til tablet og desktop***/
+/*** 8. Her bliver de forskellige bokse i bunden af siden defineret, hvor vi så senere i css'en ændre de få ting der skal ændres så de passer til tablet og desktop***/
 .boks1{
   height: 30%;
   width: 25%;
@@ -127,21 +142,23 @@ p{
   text-align: center;
 }
 
-/*** Der her er til så Google maps fylder hele boksen den er placeret i ***/
+/*** 9. Der her er til så Google maps fylder hele boksen den er placeret i ***/
 iframe{
   width:100%;
   height:100%;
   border:0;
 }
 
-/*** Her skaber vi det grid som åbningstiderne skal placeres i***/
+/*** 10. Her skaber vi det grid som åbningstiderne skal placeres i***/
 section{
 	display:grid;
 	grid-template-columns: repeat(2, 1fr);
 }
 
-/*** Alt det css imellen det nedenstående @media tag og det næste @media tag er til de ændringer der skal afvige fra mobile til tablet.***/
+/*** 11. Alt det css imellen det nedenstående @media tag og det næste @media tag er til de ændringer der skal afvige fra mobile til tablet.***/
 @media only screen and (min-width: 600px) {
+
+/*** 12. ***/
 .boks1{
   bottom: 25%;
   left: 5%;
@@ -156,13 +173,17 @@ section{
   bottom: 25%;
   left: 60%;
 }
+
+/*** 13. ***/
 .a2 {
   top: 5%;
   left: 80%;
 }
 
-/*** Alt det css fra det nedenstående @media tag og til slutten af dokumentet er til de ændringer der skal afvige fra mobile til desktop.***/
+/*** 14. Alt det css fra det nedenstående @media tag og til slutten af dokumentet er til de ændringer der skal afvige fra mobile til desktop.***/
 @media only screen and (min-width: 900px) {
+
+/*** 15. ***/
 .boks1{
   bottom: 0%;
   left: 5%;
@@ -178,6 +199,7 @@ section{
   left: 68%;       
 }
 
+/*** 16. ***/
 .a2{
   top: 54.2%;
   left: 74.4%;
