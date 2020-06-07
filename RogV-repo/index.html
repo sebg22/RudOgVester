@@ -1,7 +1,11 @@
 
 <!doctype html>
 <html>
+
+	<!-- Her er head tagget, hvor alle meta og link tags bliver sat ind. Derudover google analytics bliver lagt i toppen af koden. -->
 <head>
+
+	<!-- google analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154356829-1"></script>
 	<script>
   window.dataLayer = window.dataLayer || [];
@@ -9,33 +13,55 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-154356829-1');
-    </script>
+	</script>
+
+	<!-- UTF-8 meta, så alle tegn vises på siden (æ,ø,å)-->
 	<meta charset="UTF-8">
 	<title>Rud og Vester</title>
+
+	<!-- Linker til jquery, til animation til logo-->
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- NOINDEX, NOFOLOOW - Bruges så siden ikke kan findes i forskellige søgemaskiner-->
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 	<link rel="stylesheet" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div id="wrapper">
-		<header>
-			<nav>
-				<a id="navimg" href="index.html"><img src="images/logo.png" alt="logo" width="5%"></a>
-			</nav>			
-		</header>
+		<div id="navimg">
+			<a href="http://smpedersen.com/Rudogvester%C2%A8/"><img src="images/Logo1.png" alt="Rud Og Vester Logo" width="200"></a>
+		</div>		
     <main>
-			<a href="#"><button class="button button2">Shop</button></a>
-		<div class="boks1"><p>Rudogvester@hotmailtest.com</p></div>
-		<div class="boks2"><div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2251.759781975171!2d12.083259816132216!3d55.640993008076904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525fc55eee80d1%3A0xcb3440af4bd99011!2sAlgade%2022%2C%204000%20Roskilde!5e0!3m2!1sda!2sdk!4v1591335896956!5m2!1sda!2sdk"
-			 width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div></div>
-		<div class="boks3"><p>+4141231412</p><p>Alegade 22</p></div>
-    </main>
-		
-	</div>
-	<script>
 
+		<!-- En alternativ knap, uden button tag. Lavet på denne måde for at give den rigtige effekt - benyttet javascript til effekten-->
+		<a href="http://smpedersen.com/Rudogvester%C2%A8/" class="a2">WEBSHOP</a>
+
+		<!-- Boks 1,2,3 er rammer til de forskellige elementer i bunden af siden fra venstre mod højre-->
+	<div class="boks1"><p class="p4">ÅBNINGSTIDER</p>
+
+		<!-- Benyttet en section for at give denne boks andre grids end på resten af siden, i dette tilfælde bare 2 så Lørdag og Søndag kommer til at stå til højre-->
+		<section>
+			<p class="p1">MANDAG: 10 - 18</p><p class="p2"> LØRDAG: 10 - 15 </p><p class="p1">TIRSDAG: 10 - 18</p><p class="p2"> SØNDAG: LUKKET</p><p class="p1">ONSDAG: 10 - 18 </p><p class="p1">TORSDAG: 10 - 18</p> <p class="p1">FREDAG: 10 - 18</p>
+		</section>
+	</div>
+
+		<!-- Her bliver der brugt Google maps embed-->
+		<div class="boks2"><div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2251.759781975171!2d12.083259816132216!3d55.640993008076904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525fc55eee80d1%3A0xcb3440af4bd99011!2sAlgade%2022%2C%204000%20Roskilde!5e0!3m2!1sda!2sdk!4v1591335896956!5m2!1sda!2sdk"style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div></div>
+		<div class="boks3"><p class="p4">KONTAKT</p><p class="p3">46 32 36 86</p><p class="p3">INFO@RUDVESTER.DK</p><p class="p3">ALGADE 22</p></div>
+    </main>
+	</div>
+
+	<!-- Her bruges jQuery til animation til logo og knap-->
+	<script>
+		$(function() {
+		$("#navimg").fadeOut(0).fadeIn(1000);
+		$(".a2").fadeOut(0).fadeIn(1000);
+		});
 	</script>
+
+	<!-- linker til javascript i bunden af dokumentet-->
 	<script src="js.js"></script>
 </body>
 </html>

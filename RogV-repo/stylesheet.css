@@ -1,170 +1,184 @@
+/*** det der skal være ens for alt inde i body tagget bliver defineret her***/
 body{
-	font-family: 'Montserrat', sans-serif;
-	background-image: url('images/nyyyy.png');
-  	background-repeat: no-repeat;
-  	background-attachment: fixed;
-      background-size: cover;
-      margin: 10%;
-    }
+  font-family: 'Montserrat', sans-serif;
+	background-image: url('images/landingpage_baggrund.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  margin:auto;
+  text-decoration: none;
+}
 
+/*** Her bliver designet af knappen defineret ***/
+.a2{
+  position: absolute;
+  display: inline-block;
+  padding: 12px 36px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-size: 18px;
+  background: linear-gradient(90deg,#2b8d93,#2b8d93);
+  position: absolute;
+  top: 5%;
+  left: 70%;
+}
+
+/*** span bliver lavet her, fordi den er nem at have med at gøre i javascript. Det er i javascript vi bestemmer, hvor "span" skal bruges henne (på knappen) ***/
+span{
+  position: absolute;
+  background:#fff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 1s linear infinite;
+}
+
+/*** Vi bruger @Keyframes, fordi vi vil lave en animation der sker når du trykker på knappen. Det er så vi kan bestemme, hvad der sker på de forskellige keyframes***/
+@keyframes animate{
+0%
+{
+  width: 0px;
+  height: 0px;
+  opacity: 0.5;
+}
+100%
+{
+  width: 500px;
+  height: 500px;
+  opacity: 0;
+} 
+}
+
+/*** Vi bruger et enkelt grid på siden, definere vi det i alle de ting der skal placeres.***/
 header{
-        grid-column: 1 / 1;
-        margin-top: 0px;
-    }
+  grid-column: 1 / 1;
+  margin-top: 0px;
+}
     
 nav{
-        grid-column: 1 / 1;
-        font-size: 10px;
-    }
-
-#navimg{
-        text-align: center;
-        padding-top:5px;
-        padding-bottom: 5px;
-        display: block;
-        position: absolute;
-        top:5%;
-        left:50%;
-        
-    }
-
-.button {
-    border: none;
-     color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    position: absolute;
-    top: 5%;
-    left: 70%;
- }
-
- .button2 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid black;
-  }
-  
-  .button2:hover {
-    background-color: black;
-    color: white;
-  }
-
-  .billede1{
-    height: 850px;
-    width: 1520px;
-    background-color: white;
-    position: absolute;
-    top: 12%;
-    left: 10%;
+  grid-column: 1 / 1;
+  font-size: 10px;
 }
 
+/*** Dette id bruges til at placere logoet i toppen af siden***/
+#navimg{
+  text-align: center;
+  padding-top:2%;
+  padding-bottom: 5px;
+  display: block;
+}
 
-  .boks1{
-    height: 100px;
-    width: 450px;
-    background-color: white;
-    position: absolute;
-    bottom: 0%;
-    left: 5%;
-    text-align: center;
+p{
+  color: #7a322a;
+  font-weight: 100 !important;
+}
+
+/*** de forskellige classes (p1,p2,p3) til at placere åbningstiderne ved siden af hinanden og (p4) definere overskrifterne i boksene***/
+.p1{
+  grid-column: 1/2;
+  margin-top: -5%;
+  text-align: left;
+}
+.p2{
+  grid-column: 2/2;
+  margin-top: -5%;
+  text-align: left;
+}
+.p3{
+  margin-top: -3%;
+}
+.p4{
+  color:#2b8d93; 
+  font-size:1.4em;
+}
+
+/*** Her bliver de forskellige bokse i bunden af siden defineret, hvor vi så senere i css'en ændre de få ting der skal ændres så de passer til tablet og desktop***/
+.boks1{
+  height: 30%;
+  width: 25%;
+  background-color: rgb(255,255,255,0.7);
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  text-align: center;
 }
 
 .boks2{
-        height: 100px;
-        width: 450px;
-        background-color: white;
-        position: absolute;
-        bottom: -20%;
-        left: 5%;
-        text-align: center;
-    }
-
-.boks3{
-        height: 100px;
-        width: 450px;
-        background-color: white;
-        position: absolute;
-        bottom: -40%;
-        left: 5%;
-        text-align: center;
+  height: 25%;
+  width: 25%; 
+  background-color: rgb(255,255,255,0.7);
+  position: absolute;
+  bottom: -20%;
+  left: 5%;
+  text-align: center;
 }
 
+.boks3{
+  height: 30%;
+  width: 25%;
+  background-color: rgb(255,255,255,0.7);
+  position: absolute;
+  bottom: -40%;
+  left: 5%;
+  text-align: center;
+}
+
+/*** Der her er til så Google maps fylder hele boksen den er placeret i ***/
 iframe{
   width:100%;
-   height:300px;
-   frameborder:0;
-   style="border:0;"
+  height:100%;
+  border:0;
 }
 
+/*** Her skaber vi det grid som åbningstiderne skal placeres i***/
+section{
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/*** Alt det css imellen det nedenstående @media tag og det næste @media tag er til de ændringer der skal afvige fra mobile til tablet.***/
 @media only screen and (min-width: 600px) {
-  .boks1{
-    height: 125px;
-    width: 300px;
-    background-color: white;
-    position: absolute;
-    bottom: 25%;
-    left: 5%;
+.boks1{
+  bottom: 25%;
+  left: 5%;
 }
 
 .boks2{
-        height: 125px;
-        width: 500px;
-        background-color: white;
-        position: absolute;
-        bottom: 0%;
-        left: 20%;
-    }
+  bottom: 0%;
+  left: 20%;
+}
 
 .boks3{
-        height: 125px;
-        width: 300px;
-        background-color: white;
-        position: absolute;
-        bottom: 25%;
-        left: 60%;
+  bottom: 25%;
+  left: 60%;
 }
-.button {
-
+.a2 {
   top: 5%;
   left: 80%;
 }
+
+/*** Alt det css fra det nedenstående @media tag og til slutten af dokumentet er til de ændringer der skal afvige fra mobile til desktop.***/
 @media only screen and (min-width: 900px) {
-  .boks1{
-    height: 36.7%;
-    width: 500px;
-    background-color: grey;
-    position: absolute;
-    bottom: 0%;
-    left: 5%;
+.boks1{
+  bottom: 0%;
+  left: 5%;
 }
 
 .boks2{
-        height: 36.7%;
-        width: 500px;
-        background-color: grey;
-        position: absolute;
-        bottom: 0%;
-        left: 36.5%;
-
-    }
-
-.boks3{
-        height: 36.7%;
-        width: 500px;
-        background-color: grey;
-        position: absolute;
-        bottom: 0%;
-        left: 68%;
+  bottom: 0%;
+  left: 38%;
 }
 
-.button {
+.boks3{
+  bottom: 0%;
+  left: 68%;       
+}
 
-  top: 5%;
-  left: 90%;
+.a2{
+  top: 54.2%;
+  left: 74.4%;
 }
