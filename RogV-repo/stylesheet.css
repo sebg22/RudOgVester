@@ -49,8 +49,8 @@ body{
   font-size: 18px;
   background: linear-gradient(90deg,#2b8d93,#2b8d93);
   position: absolute;
-  top: 5%;
-  left: 70%;
+  top: 50.2%;
+  left: 64.4%;
 }
 
 /*** 3. span bliver lavet her, fordi den er nem at have med at gøre i javascript. Det er i javascript vi bestemmer, hvor "span" skal bruges henne (på knappen) ***/
@@ -96,12 +96,12 @@ p{
 .p1{
   grid-column: 1/2;
   margin-top: -5%;
-  text-align: left;
+  text-align: center;
 }
 .p2{
   grid-column: 2/2;
   margin-top: -5%;
-  text-align: left;
+  text-align: center;
 }
 .p3{
   margin-top: -3%;
@@ -113,32 +113,32 @@ p{
 
 /*** 8. Her bliver de forskellige bokse i bunden af siden defineret, hvor vi så senere i css'en ændre de få ting der skal ændres så de passer til tablet og desktop***/
 .boks1{
-  height: 30%;
-  width: 25%;
-  background-color: rgb(255,255,255,0.7);
+  height: 40%;
+  width: 100%;
+  background-color: rgb(255,255,255,1);
   position: absolute;
   bottom: 0%;
-  left: 5%;
+  left: 0%;
   text-align: center;
 }
 
 .boks2{
-  height: 25%;
-  width: 25%; 
-  background-color: rgb(255,255,255,0.7);
+  height: 40%;
+  width: 100%; 
+  background-color: rgb(255,255,255,1);
   position: absolute;
-  bottom: -20%;
-  left: 5%;
+  bottom: -40%;
+  left: 0%;
   text-align: center;
 }
 
 .boks3{
   height: 30%;
-  width: 25%;
-  background-color: rgb(255,255,255,0.7);
+  width: 100%;
+  background-color: rgb(255,255,255,1);
   position: absolute;
-  bottom: -40%;
-  left: 5%;
+  bottom: -70%;
+  left: 0%;
   text-align: center;
 }
 
@@ -160,24 +160,28 @@ section{
 
 /*** 12. ***/
 .boks1{
-  bottom: 25%;
-  left: 5%;
+  height: 35%;
+  left: 15%;
+  width: 70%;
+  background-color: rgb(255,255,255,1);
 }
 
 .boks2{
-  bottom: 0%;
-  left: 20%;
+  left: 15%;
+  width: 70%;
+  background-color: rgb(255,255,255,1);
 }
 
 .boks3{
-  bottom: 25%;
-  left: 60%;
+  left: 15%;
+  width: 70%;
+  background-color: rgb(255,255,255,1);
 }
 
 /*** 13. ***/
 .a2 {
-  top: 5%;
-  left: 80%;
+  top: 50.2%;
+  left: 70.4%;
 }
 
 /*** 14. Alt det css fra det nedenstående @media tag og til slutten af dokumentet er til de ændringer der skal afvige fra mobile til desktop.***/
@@ -185,22 +189,38 @@ section{
 
 /*** 15. ***/
 .boks1{
+  height: 30%;
+  width: 25%;
   bottom: 0%;
   left: 5%;
+  background-color: rgb(255,255,255,0.7);
 }
 
 .boks2{
+  height: 25%;
+  width: 25%;
   bottom: 0%;
   left: 38%;
+  background-color: rgb(255,255,255,0.7);
 }
 
 .boks3{
+  height: 30%;
+  width: 25%;
   bottom: 0%;
   left: 68%;       
+  background-color: rgb(255,255,255,0.7);
 }
 
 /*** 16. ***/
 .a2{
   top: 54.2%;
   left: 74.4%;
+}
+
+.p1{
+  text-align: left;
+}
+.p2{
+  text-align: left;
 }
